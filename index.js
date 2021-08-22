@@ -20,7 +20,6 @@ app.get('/users', (req, res) => {
     connection.query("select * from users", (err, row) => {
         if (err)
             res.send(err);
-        console.log(`in return ${row}`)
         res.json(row);
     })
     // }
