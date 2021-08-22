@@ -1,8 +1,9 @@
 const express = require("express")
+const {getAllAdmin} = require("../service/AdminService");
 const router = express.Router()
 
-router.route("/getAdmins").get((req, res)=> {
-    res.send([{id:"1"},{id:"1"},{id:"1"}])
-})
+router.route("/getAdmins").get(
+    getAllAdmin
+)
 
 module.exports = router
